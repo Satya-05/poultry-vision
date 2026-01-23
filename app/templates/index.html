@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Vision - Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Poultry Vision</h1>
+        <p>AI-Powered Poultry Disease Detection from Fecal Images</p>
+
+        <div class="upload-box">
+            <h2>Upload a Fecal Image</h2>
+
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <button type="submit">Analyze</button>
+            </form>
+
+            <p class="note">Supported: JPG, PNG<br>
+            Detects: Coccidiosis, Healthy, Newcastle Disease, Salmonella</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+h1 {
+    background: #2c5530;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 2.5em;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    margin: 20px 0;
+}
+
+.upload-box, .result-box {
+    padding: 40px;
+    text-align: center;
+}
+
+input[type="file"] {
+    padding: 12px;
+    margin: 20px 0;
+    border: 2px dashed #2c5530;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+button, .btn {
+    background: #2c5530;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background: #1e3a21;
+}
+
+img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.prediction {
+    background: #e8f5e8;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 6px solid #2c5530;
+}
+
+.treatment {
+    background: #fff3cd;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 6px solid #ffc107;
+}
+
+.note, small {
+    color: #666;
+    font-size: 0.95em;
+    margin-top: 20px;
+    display: block;
+}

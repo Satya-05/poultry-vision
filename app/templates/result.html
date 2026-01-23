@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Vision - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Poultry Vision</h1>
+        <p>AI Diagnosis Result</p>
+
+        <div class="result-box">
+            <h2>Result</h2>
+
+            {% if image_file %}
+                <img src="{{ url_for('static', filename='uploads/' + image_file) }}" alt="Uploaded Image">
+            {% endif %}
+
+            <div class="prediction">
+                <h3>Predicted: <strong>{{ prediction }}</strong></h3>
+                <p>Confidence: <strong>{{ confidence }}%</strong></p>
+            </div>
+
+            <div class="treatment">
+                <h3>Treatment Recommendation</h3>
+                <p>{{ treatment }}</p>
+                <small><em>Always consult a qualified veterinarian for final diagnosis and treatment.</em></small>
+            </div>
+
+            <a href="{{ url_for('index') }}" class="btn">Analyze Another Image</a>
+        </div>
+    </div>
+</body>
+</html>
